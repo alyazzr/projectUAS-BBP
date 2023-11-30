@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form M16 + Scope</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/form.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🔫</div>
+        <div class="home_model_kontak">
+            <div><a href="../../home.html">Home</a></div>
+            <div><a href="../../model.html">Model</a></div>
+        </div>
+    </nav>
+    <form>
+        <ul>
+            <li>
+                <label for="nama">Nama : </label>
+                <input type="text" name="nama" id="nama" required>
+            </li>
+            <li>
+                <label for="mobil">Mobil : </label>
+                <input type="text" name="mobil" id="mobil" placeholder="M16 + Scope" readonly>
+            </li>
+            <li>
+                <label for="harga">Harga : </label>
+                <input type="text" name="harga" id="harga" placeholder="US$ 80" readonly>
+            </li>
+            <li>
+                <label for="alamat">Alamat : </label>
+                <input type="text" name="alamat" id="alamat" required>
+            </li>
+            <li>
+                <label for="pembayaran">Pembayaran:</label>
+                <div>
+                    <input type="radio" id="pembayaran_debit" name="pembayaran" value="debit" required>
+                    <label for="pembayaran_alamat">Kartu Kredit/Debit</label>
+                    <input type="radio" id="pembayaran_transfer" name="pembayaran" value="transfer" required>
+                    <label for="pembayaran_pengambilan">Transfer Bank</label>
+                    <input type="radio" id="pembayaran_tunai" name="pembayaran" value="tunai" required>
+                    <label for="pembayaran_pengambilan">Pembayaran Tunai</label>
+                </div>
+            </li>
+            <button type="submit" name="beli" id="beli">Beli</button>
+        </ul>
+    </form>
+    <footer>
+        <div class="footer">
+            <div class="gambar1">
+                <img src="../../assets/img/yt.jpg" alt="">
+            </div>
+            <div class="gambar2">
+                <img src="../../assets/img/ig.jpg" alt="">
+            </div>
+            <div class="gambar3">
+                <img src="../../assets/img/wa.jpg" alt="">
+            </div>
+            <div><p>By: Muhammad Jamaluddin & Alya Azzahra</p></div>
+        </div>
+    </footer>
+</body>
+</html>

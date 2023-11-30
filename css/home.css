@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: hidden;
+}
+.navbar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 70px;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'logo home_model_kontak';
+}
+.navbar .logo {
+    grid-area: logo;
+    margin-left: 50px;
+    font-size: 50px;
+}
+.navbar .home_model_kontak {
+    grid-area: home_model_kontak;
+    margin-top: 10px;
+    margin-right: 30px;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    cursor: pointer;
+}
+.navbar .home_model_kontak div {
+    margin: 20px;
+    font-size: 25px;
+}
+.navbar .home_model_kontak div:hover {
+    font-size: 26px;
+} 
+.navbar .home_model_kontak a {
+    color:white;
+    text-decoration: none;
+}
+.halaman_satu {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'satu dua';
+}
+.satu {
+    grid-area: 'satu';
+    margin-top: 200px;
+    width: 600px;
+    height: 800px;
+}
+.satu h1, .satu p, .satu button {
+    margin-left: 180px;
+}
+.satu h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+.satu p {
+    font-size: 30px;
+}
+.satu button {
+    margin-top: 10px;
+    width: 120px;
+    height: 50px;
+    background-color: rgba(100, 100, 100, 0.8);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.satu button a {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Mooli', sans-serif;
+    text-decoration: none;
+}
+.satu button:hover {
+    width: 121px;
+    height: 51px;
+    font-size: 31px;
+}
+.dua {
+    grid-area: 'dua';
+    margin-top: 100px;
+    width: 600px;
+    height: 800px;
+    display: flex;
+}
+.dua .gambar1 img, .dua .gambar2 img, .dua .gambar3 img {
+    width: 105px;
+    height: 380px;
+    border-radius: 20px;
+}
+.dua .gambar1 img {
+    margin-left: 250px;
+}
+.dua .gambar2 img {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.dua .gambar3 img {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(230, 230, 230, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .gambar1 img, .footer .gambar2 img, .footer .gambar3 img{
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.footer div p {
+    margin-left: 5px;
+}
+@media screen and (max-width: 1282px) {
+    .satu {
+        grid-area: 'satu';
+        margin-top: 200px;
+        width: 600px;
+        height: 800px;
+    }
+    .satu h1, .satu p, .satu button {
+        margin-left: 70px;
+    }
+    .dua {
+        grid-area: 'dua';
+        margin-top: 100px;
+        width: 500px;
+        height: 800px;
+        display: flex;
+    }
+    .dua .gambar1 img {
+        margin-left: 150px;
+    }
+}
+@media screen and (max-width: 1167px) {
+    .satu {
+        grid-area: 'satu';
+        margin-top: 200px;
+        width: 400px;
+        height: 800px;
+    }
+    .satu h1, .satu p, .satu button {
+        margin-left: 60px;
+    }
+    .dua {
+        grid-area: 'dua';
+        margin-top: 100px;
+        width: 300px;
+        height: 700px;
+        display: flex;
+    }
+    .dua .gambar1 img {
+        margin-left: 140px;
+    }
+}
+@media screen and (max-width: 1164px) {
+    .satu {
+        grid-area: 'satu';
+        margin-top: 200px;
+        width: 400px;
+        height: 800px;
+    }
+    .satu h1, .satu p, .satu button {
+        margin-left: 60px;
+    }
+    .satu h1 {font-size: 35px;}
+    .satu p {font-size: 25px;}
+    .dua {
+        grid-area: 'dua';
+        margin-top: 100px;
+        width: 300px;
+        height: 700px;
+        display: flex;
+    }
+    .dua .gambar1 img {
+        margin-left: 130px;
+    }
+}
+@media screen and (max-width: 923px) {
+    .dua .gambar1 img, .dua .gambar2 img, .dua .gambar3 img {
+        width: 80px;
+        height: 370px;
+    }
+}
+@media screen and (max-width: 832px) {
+    .dua .gambar1 img, .dua .gambar2 img, .dua .gambar3 img {
+        width: 70px;
+        height: 370px;
+    }
+}
+@media screen and (max-width: 770px) {
+    .halaman_satu {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .dua {
+        display: none;
+    }
+    .footer div p {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 462px) {
+    .navbar .logo {
+        margin-left: 20px;
+        font-size: 45px;
+    }
+    .navbar .home_model_kontak div {
+        margin: 20px;
+        font-size: 20px;
+    }
+    .navbar .home_model_kontak div:hover {
+        font-size: 21px;
+    } 
+    .halaman_satu {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .satu h1 {font-size: 30px;}
+    .satu p {font-size: 20px;}
+    .satu h1, .satu p, .satu button {
+        margin-left: 5px;
+    }
+    .dua {
+        display: none;
+    }
+    .footer div p {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&family=Montserrat:ital,wght@1,100&family=Mooli&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🔫</div>
+        <div class="home_model_kontak">
+            <div><a href="home.html">Home</a></div>
+            <div><a href="model.html">Model</a></div>
+        </div>
+    </nav>
+    <main class="halaman_satu">
+        <section class="satu">
+            <h1>One Shot, One Kill</h1>
+            <p>Cari Senjata Api Impian Anda</p>
+            <button><a href="model.html">Model</a></button>
+        </section>
+        <section class="dua">
+            <div class="gambar1">
+                <img src="./assets/img/m16_1.jpg" alt="" id="gambar1">
+            </div>
+            <div class="gambar2">
+                <img src="./assets/img/m16_2.jpg" alt="" id="gambar2">
+            </div>
+            <div class="gambar3">
+                <img src="./assets/img/m16_3.jpg" alt="" id="gambar3">
+            </div>
+        </section>
+        <footer>
+            <div class="footer">
+                <div class="gambar1">
+                    <img src="./assets/img/yt.jpg" alt="">
+                </div>
+                <div class="gambar2">
+                    <img src="./assets/img/ig.jpg" alt="">
+                </div>
+                <div class="gambar3">
+                    <img src="./assets/img/wa.jpg" alt="">
+                </div>
+                <div><p>By: Muhammad Jamaluddin & Alya Azzahra</p></div>
+            </div>
+        </footer>
+    </main>
+    <script>
+        const gambarDepan = document.getElementById("gambar1");
+        const gambarTengah = document.getElementById("gambar2");
+        const gambarBelakang = document.getElementById("gambar3");
+        let gambar1YangDitampilkan = "./assets/img/m16_1.jpg";
+
+        function gantiGambar() {
+            if (gambar1YangDitampilkan == "./assets/img/m16_1.jpg") {
+                gambarDepan.src = "./assets/img/ak47_1.jpg";
+                gambarTengah.src = "./assets/img/ak47_2.jpg";
+                gambarBelakang.src = "./assets/img/ak47_3.jpg";
+                gambar1YangDitampilkan = "./assets/img/ak47_1.jpg";
+                return
+            }
+            else if (gambar1YangDitampilkan == "./assets/img/ak47_1.jpg") {
+                gambarDepan.src = "./assets/img/hkg3_1.jpg";
+                gambarTengah.src = "./assets/img/hkg3_2.jpg";
+                gambarBelakang.src = "./assets/img/hkg3_3.jpg";
+                gambar1YangDitampilkan = "./assets/img/hkg3_1.jpg";
+                return
+            }
+            else if (gambar1YangDitampilkan == "./assets/img/hkg3_1.jpg") {
+                gambarDepan.src = "./assets/img/m16_1.jpg";
+                gambarTengah.src = "./assets/img/m16_2.jpg";
+                gambarBelakang.src = "./assets/img/m16_3.jpg";
+                gambar1YangDitampilkan = "./assets/img/m16_1.jpg";
+                return
+            }
+        }
+        setInterval(gantiGambar, 4000);
+    </script>
+</body>
+</html>

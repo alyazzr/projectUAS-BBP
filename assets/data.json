@@ -1,0 +1,67 @@
+{
+  "models": [
+    {
+      "name": "AK-47",
+      "file": "../assets/3d/Ak-47.fbx"
+    },
+    {
+      "name": "AK-47_Aksesoris_Depan1",
+      "file": "../assets/3d/Ak-47_Aksesoris_Depan1.fbx"
+    },
+    {
+      "name": "AK-47_Aksesoris_Depan2",
+      "file": "../assets/3d/Ak-47_Aksesoris_Depan2.fbx"
+    },
+    {
+      "name": "AK-47_Aksesoris_Scope1",
+      "file": "../assets/3d/Ak-47_Aksesoris_Scope1.fbx"
+    },
+    {
+      "name": "AK-47_Aksesoris_Lengkap",
+      "file": "../assets/3d/Ak-47_Aksesoris_Lengkap.fbx"
+    },
+    {
+      "name": "AK-47",
+      "file": "../assets/3d/Ak-47.fbx"
+    },
+    {
+      "name": "M16",
+      "file": "../assets/3d/M16.fbx"
+    },
+    {
+      "name": "M16_Aksesoris_Depan1",
+      "file": "../assets/3d/M16_Aksesoris_Depan1.fbx"
+    },
+    {
+      "name": "M16_Aksesoris_Depan2",
+      "file": "../assets/3d/M16_Aksesoris_Depan2.fbx"
+    },
+    {
+      "name": "M16_Aksesoris_Scope1",
+      "file": "../assets/3d/M16_Aksesoris_Scope1.fbx"
+    },
+    {
+      "name": "M16_Aksesoris_Lengkap",
+      "file": "../assets/3d/M16_Aksesoris_Lengkap.fbx"
+    },{
+      "name": "HKG3",
+      "file": "../assets/3d/HKG3.fbx"
+    },
+    {
+      "name": "HKG3_Aksesoris_Depan1",
+      "file": "../assets/3d/HKG3_Aksesoris_Depan1.fbx"
+    },
+    {
+      "name": "HKG3_Aksesoris_Depan2",
+      "file": "../assets/3d/HKG3_Aksesoris_Depan2.fbx"
+    },
+    {
+      "name": "HKG3_Aksesoris_Scope1",
+      "file": "../assets/3d/HKG3_Aksesoris_Scope1.fbx"
+    },
+    {
+      "name": "HKG3_Aksesoris_Lengkap",
+      "file": "../assets/3d/HKG3_Aksesoris_Lengkap.fbx"
+    }
+  ]
+}

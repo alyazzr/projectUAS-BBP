@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Civic Type R</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🚘</div>
+        <div class="home_model_kontak">
+            <div><a href="../home.html">Home</a></div>
+            <div><a href="../model.html">Model</a></div>
+        </div>
+    </nav>
+    <form>
+        <ul>
+            <li>
+                <label for="nama">Nama : </label>
+                <input type="text" name="nama" id="nama">
+            </li>
+            <li>
+                <label for="mobil">Mobil : </label>
+                <input type="text" name="mobil" id="mobil" placeholder="Civic Type R" readonly>
+            </li>
+            <li>
+                <label for="harga">Harga : </label>
+                <input type="text" name="harga" id="harga" placeholder="US$ 40.000" readonly>
+            </li>
+            <button type="submit" name="beli" id="beli">Beli</button>
+        </ul>
+    </form>
+    <footer>
+        <div class="footer">
+            <div class="gambar1">
+                <img src="../assets/img/yt.jpg" alt="">
+            </div>
+            <div class="gambar2">
+                <img src="../assets/img/ig.jpg" alt="">
+            </div>
+            <div class="gambar3">
+                <img src="../assets/img/wa.jpg" alt="">
+            </div>
+            <div><p>By: Muhammad Jamaluddin & Alya Azzahra</p></div>
+        </div>
+    </footer>
+</body>
+</html>
+
+import * as THREE from "three";
+import { FBXLoader } from "three/addons/loaders/FBXLoader.js";
+
+const input = document.getElementById("input");
+const buttonCari = document.getElementById("button_cari");
+const viewerContainer = document.getElementById("viewer");
+const merahButton = document.getElementById("merah");
+const hijauButton = document.getElementById("hijau");
+const biruButton = document.getElementById("biru");
+const mobilTauri = document.getElementById("mobil_tauri");
+const mobilMclaren = document.getElementById("mobil_mclaren");
+const mobilCivic = document.getElementById("mobil_civic");
+const kananButton = document.getElementById("kanan");
+const kiriButton = document.getElementById("kiri");
+const buttonBeli = document.getElementById("button_beli");
+
+let tauri = true;
+let mclaren = false;
+let civic = false;
+
+const loader = new FBXLoader();
+let WarnaDanModelDitampilan;
+let warnaDanModelFile = "../assets/3d/AlphaTauri_AT02_F1_Merah.fbx";
+
+function gantiWarnaDanModel(namaFile) {
+    warnaDanModelFile = namaFile;
+    // Hapus WarnaDanModelDitampilan yang ada sebelum memuat yang baru
+    if (WarnaDanModelDitampilan) {
+        scene.remove(WarnaDanModelDitampilan);
+        console.log("telah diganti");
+      }
+      // Muat WarnaDanModelDitampilan yang baru
+      loader.load(warnaDanModelFile, function(fbx)  {
+        WarnaDanModelDitampilan = fbx;
+        scene.add(WarnaDanModelDitampilan);
+    });
+}
+function tulisanDanBooleanTauri() {
+    mobilTauri.style.display = "block";
+    mobilMclaren.style.display = "none";
+    mobilCivic.style.display = "none";
+    tauri = true;
+    mclaren = false;
+    civic = false;
+}
+function tulisanDanBooleanMclaren() {
+    mobilTauri.style.display = "none";
+    mobilMclaren.style.display = "block";
+    mobilCivic.style.display = "none";
+    tauri = false;
+    mclaren = true;
+    civic = false;
+}
+function tulisanDanBooleanCivic() {
+    mobilTauri.style.display = "none";
+    mobilMclaren.style.display = "none";
+    mobilCivic.style.display = "block";
+    tauri = false;
+    mclaren = false;
+    civic = true;
+}
+function cariTekanEnterAtauButton() {
+    if (input.value.toLowerCase() == "tauri" || 
+    input.value.toLowerCase() == "alphatauri" ) {
+        gantiWarnaDanModel("../assets/3d/AlphaTauri_AT02_F1_Merah.fbx");
+        tulisanDanBooleanTauri();
+    }
+    else if (input.value.toLowerCase() == "mclaren senna gtr" || 
+    input.value.toLowerCase() == "mclaren") {
+        gantiWarnaDanModel("../assets/3d/Mclaren_Senna_GTR_Merah.fbx");
+        tulisanDanBooleanMclaren();
+    }
+    else if (input.value.toLowerCase() == "civic" || 
+    input.value.toLowerCase() == "civic type r") {
+        gantiWarnaDanModel("../assets/3d/Civic_Type_R_Merah.fbx");
+        tulisanDanBooleanCivic();
+    }
+}
+
+buttonBeli.addEventListener("click", function(){
+    if (tauri) {
+        window.location.href = "../form/form_tauri.html";
+    }
+    else if (mclaren) {
+        window.location.href = "../form/form_mclaren.html";
+    }
+    else if (civic) {
+        window.location.href = "../form/form_civic.html";
+    }
+})
+buttonCari.addEventListener("click", function(){
+    cariTekanEnterAtauButton();
+})
+window.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        cariTekanEnterAtauButton();
+        console.log('enter ditekan');    
+    }
+});
+kananButton.addEventListener("click", function() {
+    if (tauri) {
+    gantiWarnaDanModel("../assets/3d/Mclaren_Senna_GTR_Merah.fbx");
+    tulisanDanBooleanMclaren();
+    } 
+    else if (mclaren) {
+    gantiWarnaDanModel("../assets/3d/Civic_Type_R_Merah.fbx");
+    tulisanDanBooleanCivic();
+    }
+    else if (civic) {
+    gantiWarnaDanModel("../assets/3d/AlphaTauri_AT02_F1_Merah.fbx");
+    tulisanDanBooleanTauri();
+    }
+});
+kiriButton.addEventListener("click", function() {
+    if (tauri) {
+    gantiWarnaDanModel("../assets/3d/Civic_Type_R_Merah.fbx");
+    tulisanDanBooleanCivic();
+    } 
+    else if (civic) {
+    gantiWarnaDanModel("../assets/3d/Mclaren_Senna_GTR_Merah.fbx");
+    tulisanDanBooleanMclaren();
+    }
+    else if (mclaren) {
+    gantiWarnaDanModel("../assets/3d/AlphaTauri_AT02_F1_Merah.fbx");
+    tulisanDanBooleanTauri();
+    }
+});
+merahButton.addEventListener("click", function() {
+    if (tauri) {
+    gantiWarnaDanModel("../assets/3d/AlphaTauri_AT02_F1_Merah.fbx");
+    } 
+    else if (mclaren) {
+    gantiWarnaDanModel("../assets/3d/Mclaren_Senna_GTR_Merah.fbx");
+    }
+    else if (civic) {
+    gantiWarnaDanModel("../assets/3d/Civic_Type_R_Merah.fbx");
+    }
+});
+hijauButton.addEventListener("click", function() {
+    if (tauri) {
+    gantiWarnaDanModel("../assets/3d/AlphaTauri_AT02_F1_Hijau.fbx");
+    } 
+    else if (mclaren) {
+    gantiWarnaDanModel("../assets/3d/Mclaren_Senna_GTR_Hijau.fbx");
+    }
+    else if (civic) {
+    gantiWarnaDanModel("../assets/3d/Civic_Type_R_Hijau.fbx");
+    }
+});
+biruButton.addEventListener("click", function() {
+    if (tauri) {
+    gantiWarnaDanModel("../assets/3d/AlphaTauri_AT02_F1_Biru.fbx");
+    } 
+    else if (mclaren) {
+    gantiWarnaDanModel("../assets/3d/Mclaren_Senna_GTR_Biru.fbx");
+    }
+    else if (civic) {
+    gantiWarnaDanModel("../assets/3d/Civic_Type_R_Biru.fbx");
+    }
+});
+
+// Konfigurasi tampilan viewer
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setClearColor(0xffffff);
+viewerContainer.appendChild(renderer.domElement);
+camera.position.set(0, 200, 450); // Mengatur posisi kamera
+camera.lookAt(0, 0, 150); // Mengatur arah pandang kamera
+// Memuat WarnaDanModelDitampilan pertama kali
+loader.load(warnaDanModelFile, function(fbx)  {
+    WarnaDanModelDitampilan = fbx;
+    scene.add(WarnaDanModelDitampilan);
+});
+
+// Fungsi untuk animasi (opsional)
+const animate = function() {
+    requestAnimationFrame(animate);
+    if (WarnaDanModelDitampilan) {
+        // WarnaDanModelDitampilan.rotation.x += 0.005;
+        WarnaDanModelDitampilan.rotation.y += 0.005;
+    }
+    renderer.render(scene, camera);
+};
+
+animate();
+  

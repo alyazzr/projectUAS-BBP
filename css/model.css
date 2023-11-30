@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+}
+.navbar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 70px;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-areas: 'logo cari home_model_kontak';
+}
+.navbar .logo {
+    grid-area: logo;
+    margin-left: 50px;
+    font-size: 50px;
+}
+.navbar .cari {
+    grid-area: cari;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.navbar .cari .input {
+    margin-right: 10px;
+    padding-left: 10px;
+    width: 350px;
+    height: 30px;
+    background-color: rgba(225, 225, 225, 0.9);
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.navbar .cari button {
+    width: 80px;
+    height: 30px;
+    background-color: rgba(195, 195, 195, 0.9);
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.navbar .cari button:hover {
+    width: 81px;
+    height: 31px;
+    font-size: 21px;
+}
+.navbar .home_model_kontak {
+    grid-area: home_model_kontak;
+    margin-top: 10px;
+    margin-right: 20px;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    cursor: pointer;
+}
+.navbar .home_model_kontak div {
+    margin: 20px;
+    font-size: 25px;
+}
+.navbar .home_model_kontak div:hover {
+    font-size: 26px;
+} 
+.navbar .home_model_kontak a {
+    color:white;
+    text-decoration: none;
+}
+.judul {
+    position: absolute;
+    top: 130px;
+    left: 40px;
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+}
+hr {
+    width: 400px;
+    font-weight: bolder;
+}
+.pilih {
+    position: absolute;
+    right: 45%;
+    bottom: 50px;
+    width: 150px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.kanan_kiri_tulisan {
+    bottom: 160px;
+    width: 600px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kiri, .kanan {
+    padding: 5px;
+    color: black;
+    font-size: 40px;
+    border: 3px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.kiri:hover, .kanan:hover {
+    font-size: 45px;
+}
+.ak-47, .m16, .hkg3 {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    /* font-family: 'Orbitron', sans-serif; */
+}
+.ak-47 {
+    display: block;
+}
+.m16 {
+    display: none;
+}
+.hkg3 {
+    display: none;
+}
+.beli_edit {
+    margin-top: 10px;
+    width: 310px;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button_beli {
+    background-color: rgba(48, 134, 66, 0.8);
+}
+.button_edit {
+    background-color: rgba(134, 94, 48, 0.8);
+}
+.button_beli, .button_edit {
+    margin-left: 5px;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.button_beli p, .button_edit p {
+    color: white; 
+    font-size: 38px;
+    font-family: 'Mooli', sans-serif;
+}
+.button_beli:hover {
+    background-color: rgba(18, 102, 35, 0.8);
+}
+.button_edit:hover {
+    background-color: rgba(102, 84, 18, 0.8);
+}
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.footer .gambar1 img, .footer .gambar2 img, .footer .gambar3 img{
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+@media screen and (max-width: 1166px) {
+    .judul {
+        font-size: 40px;
+    }
+    hr {
+        width: 300px;
+    }
+    .ak-47, .m16, .hkg3 {
+        font-size: 35px;
+    }
+    .kiri, .kanan {
+        font-size: 30px;
+    }
+    .kiri:hover, .kanan:hover {
+        font-size: 35px;
+    }
+    .button_beli, .button_edit {
+        width: 140px;
+        height: 50px;
+    }
+    .button_beli p, .button_edit p {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 890px) {
+    .judul {
+        font-size: 35px;
+    }
+    hr {
+        width: 200px;
+    }
+    .navbar {
+        grid-template-columns: 150px 1fr 1fr;
+    }
+    .navbar .logo {
+        grid-area: logo;
+        margin-left: 20px;
+        font-size: 50px;
+    }
+    .navbar .cari .input {
+        width: 300px;
+    }
+    .navbar .home_model_kontak div {
+        font-size: 23px;
+    }
+    .navbar .home_model_kontak div:hover {
+        font-size: 24px;
+    }
+    .ak-47, .m16, .hkg3 {
+        font-size: 35px;
+    }
+    .kiri, .kanan {
+        font-size: 30px;
+    }
+    .kiri:hover, .kanan:hover {
+        font-size: 35px;
+    }
+    .button_beli, .button_edit {
+        width: 140px;
+        height: 50px;
+    }
+    .button_beli p, .button_edit p {
+        font-size: 30px;
+    }
+    /* .navbar .cari button {
+        width: 80px;
+        height: 30px;
+    } */
+}
+@media screen and (max-width: 782px) {
+    .judul {
+        font-size: 35px;
+    }
+    hr {
+        width: 200px;
+    }
+    .navbar {
+        grid-template-columns: 100px 1fr 1fr;
+    }
+    .navbar .home_model_kontak div {
+        font-size: 20px;
+    }
+    .navbar .home_model_kontak div:hover {
+        font-size: 21px;
+    }
+    .ak-47, .m16, .hkg3 {
+        font-size: 35px;
+    }
+    .kiri, .kanan {
+        font-size: 30px;
+    }
+    .kiri:hover, .kanan:hover {
+        font-size: 35px;
+    }
+    .button_beli, .button_edit {
+        width: 140px;
+        height: 50px;
+    }
+    .button_beli p, .button_edit p {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 782px) {
+    .judul {
+        font-size: 30px;
+    }
+    hr {
+        width: 200px;
+    }
+    .navbar {
+        grid-template-columns: 100px 1fr 1fr;
+    }
+    .navbar .home_model_kontak div {
+        font-size: 18px;
+    }
+    .navbar .home_model_kontak div:hover {
+        font-size: 19px;
+    }
+    .navbar .cari .input {
+        width: 250px;
+    }
+    .pilih {
+        right: 40%;
+    }
+    .ak-47, .m16, .hkg3 {
+        font-size: 30px;
+    }
+    .kiri, .kanan {
+        font-size: 25px;
+    }
+    .kiri:hover, .kanan:hover {
+        font-size: 30px;
+    }
+    .button_beli, .button_edit {
+        width: 140px;
+        height: 50px;
+    }
+    .button_beli p, .button_edit p {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 612px) {
+    .judul {
+        font-size: 30px;
+    }
+    hr {
+        width: 200px;
+    }
+    .navbar {
+        grid-template-columns: 90px 1fr 1fr;
+    }
+    .navbar .home_model_kontak div {
+        font-size: 18px;
+    }
+    .navbar .home_model_kontak div:hover {
+        font-size: 19px;
+    }
+    .navbar .cari .input {
+        width: 200px;
+    }
+    .pilih {
+        right: 40%;
+    }
+    .ak-47, .m16, .hkg3 {
+        font-size: 30px;
+    }
+    .kiri, .kanan {
+        font-size: 25px;
+    }
+    .kiri:hover, .kanan:hover {
+        font-size: 30px;
+    }
+    .button_beli, .button_edit {
+        width: 140px;
+        height: 50px;
+    }
+    .button_beli p, .button_edit p {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 554px) {
+    .navbar {
+        grid-template-columns: 200px 1fr;
+        grid-template-areas: 'logo home_model_kontak';
+    }
+    .navbar .home_model_kontak div { 
+        font-size: 25px;
+    }
+    .navbar .home_model_kontak div:hover {
+        font-size: 26px;
+    }
+    .navbar .cari .input {display: none}
+    .navbar .cari button {display: none}
+    .pilih {
+        right: 40%;
+    }
+    .footer div p {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 461px) {
+    .navbar .logo {
+        margin-left: 20px;
+        font-size: 45px;
+    }
+    .judul {
+        font-size: 23px;
+    }
+    hr {
+        width: 100px;
+    }
+    .navbar {
+        grid-template-columns: 120px 1fr;
+        grid-template-areas: 'logo home_model_kontak';
+    }
+    .navbar .home_model_kontak div {
+        font-size: 20px;
+    }
+    .navbar .home_model_kontak div:hover {
+        font-size: 21px;
+    }
+    .navbar .cari .input {display: none}
+    .navbar .cari button {display: none}
+    .pilih {
+        right: 30%;
+    }
+    .ak-47, .m16, .hkg3 {
+        font-size: 25px;
+    }
+    .kiri, .kanan {
+        font-size: 20px;
+    }
+    .kiri:hover, .kanan:hover {
+        font-size: 25px;
+    }
+    .button_beli, .button_edit {
+        width: 140px;
+        height: 50px;
+    }
+    .button_beli p, .button_edit p {
+        font-size: 30px;
+    }
+    .footer {
+        justify-content: center;
+    }
+    .footer div p {
+        font-size: 12px;
+    }
+}
