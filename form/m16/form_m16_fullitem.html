@@ -20,10 +20,10 @@
     </nav>
     <form>
         <ul>
-            <li>
+            <!-- <li>
                 <label for="nama">Nama : </label>
                 <input type="text" name="nama" id="nama" required>
-            </li>
+            </li> -->
             <li>
                 <label for="mobil">Senjata : </label>
                 <input type="text" name="mobil" id="mobil" placeholder="M16 Full Item" readonly>
@@ -32,11 +32,11 @@
                 <label for="harga">Harga : </label>
                 <input type="text" name="harga" id="harga" placeholder="US$ 98" readonly>
             </li>
-            <li>
+            <!-- <li>
                 <label for="alamat">Alamat : </label>
                 <input type="text" name="alamat" id="alamat" required>
-            </li>
-            <li>
+            </li> -->
+            <!-- <li>
                 <label for="pembayaran">Pembayaran:</label>
                 <div>
                     <input type="radio" id="pembayaran_debit" name="pembayaran" value="debit" required>
@@ -46,7 +46,7 @@
                     <input type="radio" id="pembayaran_tunai" name="pembayaran" value="tunai" required>
                     <label for="pembayaran_pengambilan">Pembayaran Tunai</label>
                 </div>
-            </li>
+            </li> -->
             <button type="submit" name="beli" id="beli">Beli</button>
         </ul>
     </form>
@@ -64,5 +64,18 @@
             <div><p>By: Muhammad Jamaluddin & Alya Azzahra</p></div>
         </div>
     </footer>
+    <script>
+        document.getElementById("beli").addEventListener("click", function() {
+            // Ganti nomor telepon dan pesan sesuai kebutuhan
+            var phoneNumber = "6289510644052";  // Ganti dengan nomor WhatsApp tujuan
+            var message = "nama:  ,Senjata: M16 Full Item, Harga:US$ 98";  // Ganti dengan pesan yang diinginkan
+        
+            // Membentuk tautan WhatsApp dengan nomor dan pesan
+            var whatsappLink = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+        
+            // Membuka tautan WhatsApp di jendela baru
+            window.open(whatsappLink, "_blank");
+        });
+    </script>
 </body>
 </html>
